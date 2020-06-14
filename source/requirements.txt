@@ -1,0 +1,8 @@
+pandas
+numpy
+sklearn
+tensorflow==2.1.0
+tensorflow_addons
+tensorflow_hub
+sentencepiece
+absl-py
