@@ -49,6 +49,9 @@ retain_image_labels = np.concatenate(
     axis=None
 )
 
+labels = pd.DataFrame({'id': retain_image_names, 'label': retain_image_labels})
+labels.to_csv('retained_labels.csv', index=False)
+
 retain_file_names = [image + '.dcm' for image in retain_image_names.tolist()]
 
 # Extract selected files from a Zip archive.
