@@ -20,7 +20,7 @@ def load_preprocess_image(path):
 
 
 # Make a dataset.
-def load_train_dataset(filenames, labels, image_size):
+def load_train_dataset(filenames, labels):
     path_ds = tf.data.Dataset.from_tensor_slices(filenames)
     image_ds = path_ds.map(load_preprocess_image, num_parallel_calls=AUTOTUNE)
     label_ds = tf.data.Dataset.from_tensor_slices(labels)  # Load labels.
